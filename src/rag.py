@@ -5,7 +5,7 @@ import openai
 import numpy as np
 import json
 from dotenv import load_dotenv
-from config import FAISS_INDEX_PATH, FAISS_METADATA_PATH, OPENAI_CHAT_MODEL, OPENAI_EMBEDDING_MODEL, TOP_K, DATA_DIR
+from src.config import FAISS_INDEX_PATH, FAISS_METADATA_PATH, OPENAI_CHAT_MODEL, OPENAI_EMBEDDING_MODEL, TOP_K, DATA_DIR
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -56,13 +56,13 @@ def answer_question(query):
     )
     return response.choices[0].message.content.strip()
 
-if __name__ == '__main__':
-    print("\U0001F50D Ask a question about your thesis or resume (type 'exit' to quit):\n")
-    while True:
-        query = input("\U0001F9E0 > ")
-        if query.lower() == 'exit':
-            break
-        answer = answer_question(query)
-        print("\n\U0001F4DA Answer:")
-        print(answer)
-        print()
+#if __name__ == '__main__':
+#    print("\U0001F50D Ask a question about your thesis or resume (type 'exit' to quit):\n")
+#    while True:
+#        query = input("\U0001F9E0 > ")
+#        if query.lower() == 'exit':
+#            break
+#        answer = answer_question(query)
+#        print("\n\U0001F4DA Answer:")
+#        print(answer)
+#        print()
