@@ -12,3 +12,6 @@ if query:
         answer = answer_question(query)
     st.markdown("**Answer:**")
     st.write(answer)
+
+
+
