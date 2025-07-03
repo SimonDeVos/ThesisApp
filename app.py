@@ -76,9 +76,11 @@ if query:
     try:
         r = requests.post(GOOGLE_APPS_SCRIPT_URL, data=form_data, timeout=5)
         if r.status_code != 200:
-            st.warning("⚠️ Could not log interaction (Google Script error).")
+            #st.warning("⚠️ Could not log interaction (Google Script error).")
+            pass
     except Exception as e:
-        st.warning("⚠️ Could not log interaction (network error).")
+        #st.warning("⚠️ Could not log interaction (network error).")
+        pass
 
 # --- Display session history ---
 if st.session_state.qa_history:
