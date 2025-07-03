@@ -24,21 +24,25 @@ for i, question in enumerate(example_questions):
     if cols[i % 2].button(question):
         clicked_question = question
 
-# --- Explanation Level Slider (5 levels) ---
+# --- Explanation Level Slider ---
+st.subheader("Explanation detail level")
+
 explanation_labels = {
     1: "👶 Very simple (like I'm 5)",
     2: "🗣️ Plain language",
-    3: "‍🏫 Basic explanation",
+    3: "📘 Basic explanation",
     4: "👨‍🔬 Technical",
     5: "📚 Advanced & detailed",
 }
 difficulty = st.slider(
-    f"Explanation style: {explanation_labels.get(1)} ← → {explanation_labels.get(5)}",
+    "Select explanation complexity level (1 = simple, 5 = technical)",
     min_value=1,
     max_value=5,
     value=3,
-    format="%d"
+    step=1,
 )
+
+st.caption(f"Selected level: {explanation_labels[difficulty]}")
 
 # --- Difficulty Prompts Mapping ---
 explanation_styles = {
@@ -57,7 +61,7 @@ query = st.text_input("", value=default_value)
 
 # --- Prompt Construction ---
 if query:
-    prefix = explanation_styles.get(difficulty, "")
+    prefix = explanation_styles[difficulty]
     full_query = prefix + query
 
     with st.spinner("Fetching answer..."):
