@@ -100,3 +100,17 @@ Chapter 9: Conclusion
 Publications not included in the thesis:
 Peeperkorn, J., De Vos, S. (2025). Achieving Group Fairness through Independence in Predictive Process Monitoring. In: Advanced Information Systems Engineering. Presented at the International Conference on Advanced Information Systems Engineering, Vienna, Austria. doi: 10.1007/978-3-031-94569-4_11
 Caljon, D., Vercauteren, J., De Vos, S., Verbeke, W., Van Belle, J. (2024). Using dynamic loss weighting to boost improvements in forecast stability. arXiv. doi: 10.48550/arXiv.2409.18267
+
+complete list of publications:
+Journal articles (peer reviewed)
+De Vos, S., Bockel-Rickermann, C., Van Belle, J., Verbeke, W. with De Vos, S. (corresp. author) (2024). Predicting Employee Turnover: Scoping and Benchmarking the State-of-the-Art. Business & Information Systems Engineering. doi: 10.1007/s12599-024-00898-z
+De Vos, S., De Smedt, J., Verbruggen, M., Verbeke, W. with De Vos, S. (joint first author), Verbeke, W. (joint last author), De Vos, S. (corresp. author) (2024). Data-driven internal mobility: Similarity regularization gets the job done. Knowledge-Based Systems, 295, Art.No. 111824. doi: 10.1016/j.knosys.2024.111824
+De Vos, S., Vanderschueren, T., Verdonck, T., Verbeke, W. (2023). Robust instance-dependent cost-sensitive classification. Advances in Data Analysis and Classification. doi: 10.1007/s11634-022-00533-3 Access via repository
+Book chapters (peer reviewed)
+De Vos, S., De Smedt, J., Wuytens, C., Verbeke, W. (2025). Leveraging Process Mining to Optimize Internal Employee Mobility Strategies. In: Business Process Management Cases Vol. 3: Implementation in Practice, (15-28). Cham Switserland: Springer Nature. ISBN: 978-3-031-80792-3. doi: 10.1007/978-3-031-80793-0
+Conference proceedings (peer reviewed)
+Peeperkorn, J., De Vos, S. (2025). Achieving Group Fairness through Independence in Predictive Process Monitoring. In: Advanced Information Systems Engineering. Presented at the International Conference on Advanced Information Systems Engineering, Vienna, Austria. doi: 10.1007/978-3-031-94569-4_11
+Preprints
+De Vos, S., Van Belle, J., Algaba, A., Verbeke, W., Verboven, S. (2025). Decision-centric fairness: Evaluation and optimization for resource allocation problems. arXiv. doi: 10.48550/arXiv.2504.20642
+De Vos, S., Bockel-Rickermann, C., Lessmann, S., Verbeke, W. (2024). Uplift modeling with continuous treatments: A predict-then-optimize approach. arXiv. doi: 10.48550/arXiv.2412.09232
+Caljon, D., Vercauteren, J., De Vos, S., Verbeke, W., Van Belle, J. (2024). Using dynamic loss weighting to boost improvements in forecast stability. arXiv. doi: 10.48550/arXiv.2409.18267
