@@ -24,37 +24,36 @@ for i, question in enumerate(example_questions):
     if cols[i % 2].button(question):
         clicked_question = question
 
-# --- Query Input ---
-default_value = clicked_question if clicked_question else ""
-
-st.subheader("Or type your own question below:")
-query = st.text_input("", value=default_value)
-
-# --- Explanation Level Slider ---
-st.subheader("Explanation detail level")
+# --- Explanation Level Slider (5 levels) ---
+explanation_labels = {
+    0: "👶 Very simple (like I'm 5)",
+    1: "🗣️ Plain language",
+    2: "‍🏫 Basic explanation",
+    3: "👨‍🔬 Technical",
+    4: "📚 Advanced & detailed",
+}
 difficulty = st.slider(
-    "Adjust explanation complexity",
+    f"Explanation style: {explanation_labels.get(0)} ← → {explanation_labels.get(4)}",
     min_value=0,
-    max_value=10,
-    value=5,
-    format="%d",
-    help="0 = very simple, 10 = highly technical"
+    max_value=4,
+    value=2,
+    format="%d"
 )
 
 # --- Difficulty Prompts Mapping ---
 explanation_styles = {
     0: "Explain this like I'm 5 years old: ",
-    1: "Explain this in very simple everyday language: ",
-    2: "Explain this simply, avoiding jargon: ",
-    3: "Explain this for a curious high school student: ",
-    4: "Explain this for a non-technical professional: ",
-    5: "",  # neutral
-    6: "Explain this for someone with basic technical knowledge: ",
-    7: "Give a moderately technical explanation with examples: ",
-    8: "Give a detailed technical explanation with terminology: ",
-    9: "Give an in-depth explanation suitable for grad students: ",
-    10: "Explain this thoroughly using advanced technical detail and formalism: ",
+    1: "Explain this in plain language: ",
+    2: "",  # neutral
+    3: "Explain this with technical depth: ",
+    4: "Provide an advanced and detailed explanation with formal terminology: ",
 }
+
+# --- Query Input ---
+default_value = clicked_question if clicked_question else ""
+
+st.subheader("Or type your own question below:")
+query = st.text_input("", value=default_value)
 
 # --- Prompt Construction ---
 if query:
