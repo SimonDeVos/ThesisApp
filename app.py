@@ -26,17 +26,17 @@ for i, question in enumerate(example_questions):
 
 # --- Explanation Level Slider (5 levels) ---
 explanation_labels = {
-    0: "👶 Very simple (like I'm 5)",
-    1: "🗣️ Plain language",
-    2: "‍🏫 Basic explanation",
-    3: "👨‍🔬 Technical",
-    4: "📚 Advanced & detailed",
+    1: "👶 Very simple (like I'm 5)",
+    2: "🗣️ Plain language",
+    3: "‍🏫 Basic explanation",
+    4: "👨‍🔬 Technical",
+    5: "📚 Advanced & detailed",
 }
 difficulty = st.slider(
-    f"Explanation style: {explanation_labels.get(0)} ← → {explanation_labels.get(4)}",
-    min_value=0,
-    max_value=4,
-    value=2,
+    f"Explanation style: {explanation_labels.get(1)} ← → {explanation_labels.get(5)}",
+    min_value=1,
+    max_value=5,
+    value=3,
     format="%d"
 )
 
