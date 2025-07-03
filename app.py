@@ -9,12 +9,12 @@ st.title("Ask me about my thesis or resume")
 # --- Example Questions ---
 st.subheader("Example questions")
 example_questions = [
-    "Why should I hire Simon as Senior Data Scientist?",
-    "Provide me with the structure of the thesis.",
-    "What are the benefits of using continuous treatments?",
-    "Explain cost-sensitive learning.",
-    "What is Simon's educational background?",
-    "Explain decision-centric fairness.",
+    "Why hire Simon as a Senior Data Scientist?",
+    "What’s the thesis structure?",
+    "Why use continuous treatments?",
+    "What is cost-sensitive learning?",
+    "What’s Simon’s educational background?",
+    "What is decision-centric fairness?",
 ]
 
 # --- Handle example question buttons ---
