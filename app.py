@@ -42,11 +42,11 @@ difficulty = st.slider(
 
 # --- Difficulty Prompts Mapping ---
 explanation_styles = {
-    0: "Explain this like I'm 5 years old: ",
-    1: "Explain this in plain language: ",
-    2: "",  # neutral
-    3: "Explain this with technical depth: ",
-    4: "Provide an advanced and detailed explanation with formal terminology: ",
+    1: "Explain this like I'm 5 years old: ",
+    2: "Explain this in plain language: ",
+    3: "",  # neutral
+    4: "Explain this with technical depth: ",
+    5: "Provide an advanced and detailed explanation with formal terminology: ",
 }
 
 # --- Query Input ---
