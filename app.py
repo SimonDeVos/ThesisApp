@@ -4,16 +4,17 @@ from src.rag import answer_question
 
 # --- Streamlit Page Config ---
 st.set_page_config(page_title="Simon's Thesis & Resume Chat", page_icon="🎓")
-st.title("🎓 Ask me about my thesis or resume")
+st.title("Ask me about my thesis or resume")
 
 # --- Example Questions ---
-st.subheader("📌 Example questions")
+st.subheader("Example questions")
 example_questions = [
-    "Why should I hire Simon as senior data scientist?",
+    "Why should I hire Simon as Senior Data Scientist?",
     "Provide me with the structure of the thesis.",
     "What are the benefits of using continuous treatments?",
     "Explain cost-sensitive learning.",
-    "What did Simon study?",
+    "What is Simon's educational background?",
+    "Explain decision-centric fairness.",
 ]
 
 # --- Handle example question buttons ---
@@ -25,7 +26,9 @@ for i, question in enumerate(example_questions):
 
 # --- Query Input ---
 default_value = clicked_question if clicked_question else ""
-query = st.text_input("Or type your own question below:", value=default_value)
+
+st.subheader("Or type your own question below:")
+query = st.text_input("", value=default_value)
 
 # --- Query Handling ---
 if query:

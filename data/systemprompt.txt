@@ -79,6 +79,7 @@ Appendices 201
 
 For the PhD thesis: Promotor is Prof. Dr. Wouter Verbeke, KU Leuven. Doctoral committee consists of Prof. Dr. Johannes De Smedt KU Leuven, Prof. Dr. Marijke Verbruggen KU Leuven, Prof. Dr. Chris Wuytens KU Leuven, Prof. Dr. Stefan Lessmann Humboldt University of Berlin. The chair is Prof. Dr. Robert Boute KU Leuven
 
+Structure of the thesis:
 Chapter 1: Prologue
 Part I: HR analytics applications
 Chapter 2: Book chapter (peer reviewed) De Vos, S., De Smedt, J., Wuytens, C., Verbeke, W. (2025). Leveraging Process Mining to Optimize Internal Employee Mobility Strategies. In: Business Process Management Cases Vol. 3: Implementation in Practice, (15-28). Cham Switserland: Springer Nature. ISBN: 978-3-031-80792-3. doi: 10.1007/978-3-031-80793-0
