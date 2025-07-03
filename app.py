@@ -24,45 +24,33 @@ for i, question in enumerate(example_questions):
     if cols[i % 2].button(question):
         clicked_question = question
 
-# --- Explanation Level Slider ---
-st.subheader("Explanation detail level")
-
-explanation_labels = {
-    1: "👶 Very simple (like I'm 5)",
-    2: "🗣️ Plain language",
-    3: "📘 Basic explanation",
-    4: "👨‍🔬 Technical",
-    5: "📚 Advanced & detailed",
-}
-difficulty = st.slider(
-    "Select explanation complexity level (1 = simple, 5 = technical)",
-    min_value=1,
-    max_value=5,
-    value=3,
-    step=1,
-)
-
-st.caption(f"Selected level: {explanation_labels[difficulty]}")
-
-# --- Difficulty Prompts Mapping ---
-explanation_styles = {
-    1: "Explain this like I'm 5 years old: ",
-    2: "Explain this in plain language: ",
-    3: "",  # neutral
-    4: "Explain this with technical depth: ",
-    5: "Provide an advanced and detailed explanation with formal terminology: ",
-}
-
 # --- Query Input ---
 default_value = clicked_question if clicked_question else ""
 
 st.subheader("Or type your own question below:")
 query = st.text_input("", value=default_value)
 
-# --- Prompt Construction ---
+# --- Explanation Level Slider ---
+st.subheader("Explanation technicality")
+difficulty = st.slider(
+    "Adjust the technical depth of the answer",
+    min_value=1,
+    max_value=3,
+    value=2,
+    format="%d",
+    help="Slide left for simpler explanations, right for more technical detail.",
+)
+
+# --- Prompt Tuning ---
 if query:
-    prefix = explanation_styles[difficulty]
-    full_query = prefix + query
+    if difficulty == 1:
+        instruction = "Explain this as simply as possible: "
+    elif difficulty == 3:
+        instruction = "Provide a detailed and technical explanation: "
+    else:
+        instruction = ""
+
+    full_query = instruction + query
 
     with st.spinner("Fetching answer..."):
         answer = answer_question(full_query)
